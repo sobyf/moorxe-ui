@@ -1,0 +1,17 @@
+{
+  "name": "moorxe",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16.2.0-canary.25",
+    "react": "^19.3.0-canary-3e00319b-20260203",
+    "react-dom": "^19.3.0-canary-3e00319b-20260203"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.0-dev.20260203"
+  }
+}
