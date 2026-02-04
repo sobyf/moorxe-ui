@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+@utility frame-main {
+  @apply max-w-4xl mx-auto border min-h-screen;
+}
+
+@theme inline {
+  --font-vazir: var(--font-vazir);
+}
+
+
