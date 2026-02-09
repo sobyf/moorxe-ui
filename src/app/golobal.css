@@ -1,12 +1,12 @@
+/* global.css */
+
 @import "tailwindcss";
 
-
-@utility frame-main {
-  @apply max-w-4xl mx-auto border min-h-screen;
+@utility container-body {
+  @apply max-w-5xl mx-auto;
 }
 
 @theme inline {
   --font-vazir: var(--font-vazir);
+  --font-geist: var(--font-geist);
 }
-
-
