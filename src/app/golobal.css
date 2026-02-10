@@ -1,12 +1,33 @@
-/* global.css */
-
 @import "tailwindcss";
 
-@utility container-body {
-  @apply max-w-5xl mx-auto;
+:root {
+  /* Classic Win98 Teal/Gray */
+  --background: #c0c0c0; 
+  --foreground: #000000; 
+  --primary: #F5C518
+; 
+}
+
+.dark {
+  /* Win98 High Contrast Black */
+  --background: #000000; 
+  --foreground: #c0c0c0; 
+  --primary: #F5C518
+; 
+
 }
 
 @theme inline {
   --font-vazir: var(--font-vazir);
   --font-geist: var(--font-geist);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+}
+
+@utility container-xs {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  width: 100%;
+  max-width: var(--breakpoint-xs);
 }

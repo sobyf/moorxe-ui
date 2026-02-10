@@ -6,6 +6,7 @@ import { Vazirmatn, Geist_Mono } from "next/font/google";
 import "../golobal.css";
 import { ThemeProvider } from "../../components/theme-provider";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const vazirFont = Vazirmatn({
   variable: "--font-vazir",
@@ -26,12 +27,12 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children, params }: RootLayoutProps) {
   const { lang } = use(params);
-  const dir = lang === "en" ? "ltr" : "rtl";
-  const activeFont = lang === "en" ? "font-geist" : "font-vazir"
+  const dir = lang === "fa" ? "rtl" : "ltr" ;
+  const activeFont = lang === "fa" ? "font-vazir" : "font-geist";
 
   return (
     <html lang={lang} dir={dir} className={`${geistFont.variable} ${vazirFont.variable} antialiased`} suppressHydrationWarning>
-      <body className={`${activeFont} min-h-screen`}>
+      <body className={`${activeFont} min-h-screen bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -43,7 +44,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
           {/* Main */}
           <main>{children}</main>
           {/* Footer */}
-          <footer>{/* Footer Content */}</footer>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
